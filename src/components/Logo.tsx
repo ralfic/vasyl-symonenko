@@ -21,7 +21,7 @@ export const Logo = ({ color = 'black', size = 'sm' }: Props) => {
         animate="visible"
         whileHover={{}}
         src="/ukraine.svg"
-        className={cn('cursor-pointer', {
+        className={cn('cursor-pointer dark:invert', {
           '': color === 'black',
           invert: color === 'white',
           'w-8 h-8': size === 'sm',

@@ -32,7 +32,10 @@ export const HomePage = () => {
       >
         <section>
           <div className="mx-auto flex flex-col max-w-[800px] justify-center items-center gap-2 mb-8">
-            <m.h1 variants={textVariants} className="text-5xl text-center font-semibold">
+            <m.h1
+              variants={textVariants}
+              className="text-5xl text-center font-semibold"
+            >
               «У мене Україна одна»
             </m.h1>
             <m.p variants={textVariants} className="italic">
@@ -42,7 +45,7 @@ export const HomePage = () => {
           </div>
           <m.div
             variants={graduallyVariants}
-            className="self-center bg-(--tw-color-card) rounded-lg shadow-md p-4"
+            className="self-center bg-(--tw-color-card) dark:bg-(--tw-color-blue)/30 dark:shadow-(--tw-color-light-blue) rounded-lg shadow-md p-4"
           >
             <div className="flex flex-col gap-3 mb-6">
               <m.p variants={textVariants}>

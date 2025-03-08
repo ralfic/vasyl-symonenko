@@ -1,3 +1,5 @@
+import { link } from 'fs';
+
 export const NavPaths = [
   {
     name: 'Головна',
@@ -19,6 +21,10 @@ export const NavPaths = [
     name: 'Тест',
     path: '/test',
   },
+  {
+    name: 'Інформація',
+    path: '/info',
+  },
 ];
 
 export const vasylSymonenkoWorks = [
@@ -29,7 +35,7 @@ export const vasylSymonenkoWorks = [
       'Вірш про людську гідність та відповідальність за світ навколо.',
     quote:
       'Ти знаєш, що ти — людина? Ти знаєш про це чи ні? У твоїх руках твоя доля, У твоїх руках вся земля.',
-    link: 'https://www.ukrlib.com.ua/world/printit.php?tid=1054',
+    link: 'https://www.ukrlib.com.ua/books/printit.php?tid=259',
   },
   {
     title: '" Лебеді материнства "',
@@ -37,7 +43,7 @@ export const vasylSymonenkoWorks = [
     description: 'Вірш, присвячений материнській любові та жіночій красі.',
     quote:
       'Лебеді материнства, Ви — вічності крила. Ви — щастя, ви — єдність, Ви — сила, ви — хвала.',
-    link: 'https://www.ukrlib.com.ua/world/printit.php?tid=1055',
+    link: 'https://www.ukrlib.com.ua/books/printit.php?tid=252',
   },
   {
     title: '" Україна "',
@@ -46,7 +52,7 @@ export const vasylSymonenkoWorks = [
       'Гімн любові до Батьківщини, яка живе в серці кожного українця.',
     quote:
       'Україно, Україно, Серце моє і любов! Ти — надія, ти — єдність, Ти — народів вічний зов.',
-    link: 'https://www.ukrlib.com.ua/world/printit.php?tid=1056',
+    link: 'https://www.ukrlib.com.ua/books/printit.php?tid=260',
   },
   {
     title: '" У мене Україна одна "',
@@ -55,58 +61,68 @@ export const vasylSymonenkoWorks = [
       'Вірш про єдність українського народу та любов до рідної землі.',
     quote:
       'У мене Україна одна. І в серці, і в пісні одна. І в долі, і в радості одна. І в житті, і в смерті одна.',
-    link: 'https://www.ukrlib.com.ua/world/printit.php?tid=1057',
+    link: 'https://vasylsymonenko.org/statti/u-mene-ukrayina-odna/',
   },
   {
-    title: '" Заповіт "',
-    year: '1963',
+    title: 'Тиша і грім',
+    year: 1962,
     description:
-      'Духовний заповіт поета, який закликає не зраджувати своїх ідеалів.',
-    quote:
-      'Не бійтеся бути самими собою. Не бійтеся бути Українцями. Бо тільки в цьому — наша сила, І тільки в цьому — наша правда.',
-    link: 'https://www.ukrlib.com.ua/world/printit.php?tid=1058',
+      'Перша збірка поезій Симоненка, яка принесла йому широке визнання.',
+    quote: 'Тиша — це лише передгрім...',
+    link: 'https://www.ukrlib.com.ua/books/printit.php?tid=3671',
   },
   {
-    title: '" Казка про сонечко "',
-    year: '1960-ті',
-    description: 'Вірш для дітей про красу природи та важливість доброти.',
-    quote:
-      'Сонечко сіяло світло, І земля оживала. І кожна квітка, і кожна травинка Щасливо посміхалася.',
-    link: 'https://www.ukrlib.com.ua/world/printit.php?tid=1059',
-  },
-  {
-    title: '" Дзвіночок "',
-    year: '1960-ті',
-    description: 'Ліричний вірш про красу української природи та рідної мови.',
-    quote:
-      'Дзвіночок дзвенить у полі, І вітер грає з ним. І кожен звук, і кожне слово Несе в собі Україну.',
-    link: 'https://www.ukrlib.com.ua/world/printit.php?tid=1060',
-  },
-  {
-    title: '" Вірш про вірш "',
-    year: '1962',
-    description: 'Роздуми про роль поезії у житті людини та суспільства.',
-    quote:
-      'Вірш — це не лише слова. Вірш — це душа, яка говорить. Вірш — це крик, який лунає, Вірш — це світло, яке веде.',
-    link: 'https://www.ukrlib.com.ua/world/printit.php?tid=1061',
-  },
-  {
-    title: '" Пісня про пісню "',
-    year: '1961',
+    title: 'Земне тяжіння',
+    year: 1964,
     description:
-      'Вірш про важливість пісні як засобу збереження національної ідентичності.',
-    quote:
-      'Пісня — це душа народу. Пісня — це його голос. Пісня — це його сила, Пісня — це його доля.',
-    link: 'https://www.ukrlib.com.ua/world/printit.php?tid=1062',
+      'Збірка поезій, в якій поет розкриває глибокі філософські роздуми про життя та смерть.',
+    quote: 'Земля тягне до себе, як мати...',
+    link: 'https://booknet.ua/book/zemne-tyazhnnya-b326359',
   },
   {
-    title: '" Молитва "',
-    year: '1963',
+    title: 'Вино з троянд',
+    year: 1965,
+    description: 'Збірка новел, в якій Симоненко виявив свій талант прозаїка.',
+    quote: 'Вино з троянд — це сльози щастя...',
+    link: 'https://www.ukrlib.com.ua/books/printit.php?tid=3658',
+  },
+  {
+    title: 'Цар Плаксій та Лоскотон',
+    year: 1963,
     description:
-      'Вірш, у якому поет звертається до Бога з проханням про мир і свободу для України.',
-    quote:
-      'Господи, дай нам силу Боротися за правду. Дай нам віру, дай нам надію, Дай нам мир і свободу.',
-    link: 'https://www.ukrlib.com.ua/world/printit.php?tid=1063',
+      'Казка для дітей, яка стала класикою української дитячої літератури.',
+    quote: 'У царстві Плаксія сміх був заборонений...',
+    link: 'https://www.ukrlib.com.ua/books/printit.php?tid=261',
+  },
+  {
+    title: 'Подорож у країну Навпаки',
+    year: 1964,
+    description:
+      'Ще одна відома казка Симоненка, яка вчить дітей добру та справедливості.',
+    quote: 'У країні Навпаки все йшло навпаки...',
+    link: 'https://www.ukrlib.com.ua/books/printit.php?tid=21967',
+  },
+  {
+    title: 'Грудочка любимої землі',
+    year: 1995,
+    description: 'Збірка, видана посмертно, яка містить вірші та новели поета.',
+    quote: 'Грудочка землі — це все, що лишилося...',
+    link: 'https://www.ukrlib.com.ua/books/printit.php?tid=244',
+  },
+  {
+    title: 'Півні на рушниках',
+    year: 1992,
+    description: 'Збірка, видана посмертно, яка містить вірші та новели поета.',
+    quote: 'Півні вишиті на рушниках, як молитва...',
+    link: 'https://www.ukrlib.com.ua/books/printit.php?tid=3659',
+  },
+  {
+    title: 'Задивляюсь у твої зіниці',
+    year: 1962,
+    description:
+      'Відомий вірш, в якому Василь Симоненко висловлює свою любов до України.',
+    quote: 'Задивляюсь у твої зіниці, як у безодню...',
+    link: 'https://www.ukrlib.com.ua/books/printit.php?tid=239',
   },
 ];
 

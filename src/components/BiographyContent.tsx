@@ -5,8 +5,8 @@ export const BiographyContent = () => {
   return (
     <div className="flex flex-col gap-4">
       {biographyData.sections.map((section, index) => (
-        <ScrollReveal key={index} delay={index * 0.1}>
-          <div className="flex gap-4 bg-(--tw-color-card) rounded-lg shadow-md p-4 max-md:flex-col  ">
+        <ScrollReveal key={index} delay={index * 0.2}>
+          <div className="flex gap-4 bg-(--tw-color-card) dark:bg-(--tw-color-blue)/30 rounded-lg shadow-md p-4 max-md:flex-col  ">
             {section.image && (
               <img
                 className="max-w-[300px] max-h-[300px] rounded-3xl flex-shrink-0 bg-stone-200"

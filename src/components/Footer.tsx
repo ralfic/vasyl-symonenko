@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 export const Footer = () => {
   return (
-    <footer className="pt-8 pb-4 text-white  bg-black">
+    <footer className="pt-8 pb-4 text-white  bg-black dark:bg-gray-900">
       <Container className="flex gap-4 justify-between items-center max-sm:flex-col max-sm:gap-2">
         <Logo color="white" size="md" />
         <p className="text-center">«Ти знаєш, що ти — людина?».</p>

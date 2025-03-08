@@ -45,7 +45,7 @@ export const TestPage = () => {
         transition={{ duration: 0.5 }}
         initial="hidden"
         animate="visible"
-        className="p-6 rounded-lg shadow-md text-2xl max-w-[600px] w-full"
+        className="p-6 rounded-lg dark:bg-(--tw-color-blue)/30 bg-(--tw-color-card) shadow-md text-2xl max-w-[600px] w-full"
       >
         {currentQuestionIndex < vasylSymonenkoQuiz.length ? (
           <div className="flex flex-col gap-2">
@@ -59,7 +59,7 @@ export const TestPage = () => {
                 (option) => (
                   <div key={option} className="flex items-center space-x-2">
                     <RadioGroupItem
-                      className="cursor-pointer"
+                      className="cursor-pointer dark:bg-white/20 "
                       value={option}
                       id={option}
                     />
@@ -71,8 +71,8 @@ export const TestPage = () => {
               )}
             </RadioGroup>
             <MButton
-              className="self-start"
-              size={'lg'}
+              className="self-start mt-2"
+              size={'sm'}
               onClick={handleNextQuestion}
               disabled={!selectedOption}
               whileHover={{ scale: 1.05 }}

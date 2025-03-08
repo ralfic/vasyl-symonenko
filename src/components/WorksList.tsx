@@ -15,7 +15,7 @@ export const WorksList = () => {
         <m.li
           variants={itemVariants}
           key={work.title}
-          className="p-4 bg-(--tw-color-card) rounded-lg shadow-md"
+          className="p-4 bg-(--tw-color-card) dark:bg-(--tw-color-blue)/30 rounded-lg shadow-md"
           whileHover={{ scale: 1.02 }}
         >
           <div className="flex justify-between">

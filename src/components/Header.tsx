@@ -3,8 +3,11 @@ import { MenuNav } from './MenuNav';
 import { Logo } from './Logo';
 import { useTransform, useViewportScroll, m } from 'framer-motion';
 import { BurgerMenu } from './BurgerMenu';
+import { Sun } from 'lucide-react';
+import useToggleThem from '@/hooks/useToggleThem';
 
 export const Header = () => {
+  const { toggleTheme } = useToggleThem();
   const { scrollY } = useViewportScroll();
   const background = useTransform(
     scrollY,
@@ -23,8 +26,14 @@ export const Header = () => {
         <div className="max-md:hidden">
           <MenuNav />
         </div>
-        <div className='hidden max-md:block'>
-          <BurgerMenu />
+        <div className='flex gap-4 items-center'>
+          <Sun
+            className="w-6 h-6 cursor-pointer dark:text-white"
+            onClick={toggleTheme}
+          />
+          <div className="hidden max-md:block">
+            <BurgerMenu />
+          </div>
         </div>
       </Container>
     </m.header>

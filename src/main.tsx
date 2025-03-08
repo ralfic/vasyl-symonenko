@@ -10,6 +10,7 @@ import { GalleryPage } from './pages/gallery/GalleryPage';
 import { TestPage } from './pages/test/TestPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { LazyMotion, domAnimation } from 'framer-motion';
+import { InfoPage } from './pages/info/InfoPage';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/creativity" element={<CreativityPage />} />
             <Route path="/test" element={<TestPage />} />
+            <Route path="/info" element={<InfoPage />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
