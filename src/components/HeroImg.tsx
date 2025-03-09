@@ -11,8 +11,8 @@ export const HeroImg = () => {
       variants={imageVariants}
       initial="hidden"
       animate="visible"
-      className="w-96 h-96 flex-shrink-0  rounded-full bg-stone-200 "
-      src="/portret2.jpg"
+      className="w-96 h-96 max-sm:w-80 max-sm:h-80 flex-shrink-0  rounded-full bg-stone-200 object-fill"
+      src="/portret4.jpg"
       whileHover={{ scale: 1 }}
       whileTap={{ scale: 0.9 }}
       transition={{

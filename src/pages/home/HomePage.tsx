@@ -38,14 +38,17 @@ export const HomePage = () => {
             >
               «У мене Україна одна»
             </m.h1>
-            <m.p variants={textVariants} className="italic">
+            <m.p
+              variants={textVariants}
+              className="italic dark:text-(--tw-color-dark-secondary-text)"
+            >
               Сайт присвячений 90-річчю з дня народження Василя Симоненка —
               поета, журналіста, борця за свободу України.
             </m.p>
           </div>
           <m.div
             variants={graduallyVariants}
-            className="self-center bg-(--tw-color-card) dark:bg-(--tw-color-blue)/30 dark:shadow-(--tw-color-light-blue) rounded-lg shadow-md p-4"
+            className="self-center bg-(--tw-color-card) dark:shadow-[rgba(0,_0,_0,_0.5)] dark:bg-(--tw-color-dark-secondary-background) dark:shadow-(--tw-color-light-blue) rounded-lg shadow-md p-4"
           >
             <div className="flex flex-col gap-3 mb-6">
               <m.p variants={textVariants}>
@@ -64,7 +67,7 @@ export const HomePage = () => {
 
             <m.p
               variants={textVariants}
-              className="italic font-semibold text-center  "
+              className="italic font-semibold text-center dark:text-(--tw-color-dark-accent) "
             >
               « У мене Україна одна. І в серці, і в пісні одна. І в долі, і в
               радості одна. І в житті, і в смерті одна ».

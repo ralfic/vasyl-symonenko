@@ -15,7 +15,7 @@ export const WorksList = () => {
         <m.li
           variants={itemVariants}
           key={work.title}
-          className="p-4 bg-(--tw-color-card) dark:bg-(--tw-color-blue)/30 rounded-lg shadow-md"
+          className="p-4 bg-(--tw-color-card) dark:shadow-[rgba(0,_0,_0,_0.5)] dark:bg-(--tw-color-dark-secondary-background) rounded-lg shadow-md"
           whileHover={{ scale: 1.02 }}
         >
           <div className="flex justify-between">
@@ -25,14 +25,14 @@ export const WorksList = () => {
               href={work.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-(--tw-color-primary) hover:underline"
+              className="text-(--tw-color-primary) hover:underline dark:text-(--tw-color-dark-accent)"
               title="Прочитати"
             >
               <ArrowRightIcon />
             </m.a>
           </div>
           <p className="text-sm text-muted-foreground">Рік: {work.year}</p>
-          <p className="mt-2">{work.description}</p>
+          <p className="mt-2 dark:text-white/80">{work.description}</p>
           <blockquote className="mt-4 italic border-l-4 border-(--tw-color-primary) pl-4">
             {work.quote}
           </blockquote>

@@ -30,7 +30,7 @@ export const MenuNav = ({ closeMenu }: { closeMenu?: () => void }) => {
             key={path.name}
             whileHover={{ y: -2 }}
             transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="max-md:text-center"
+            className="max-md:text-center dark:hover:text-(--tw-color-dark-accent) transition-colors"
           >
             <Link
               className={cn(

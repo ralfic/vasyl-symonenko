@@ -18,9 +18,12 @@ export const BiographyPage = () => {
       </m.h1>
 
       <ScrollReveal>
-        <div className="bg-(--tw-color-card) dark:bg-(--tw-color-blue)/30 rounded-lg shadow-md p-4">
+        <div className="bg-(--tw-color-card) dark:shadow-[rgba(0,_0,_0,_0.5)] dark:bg-(--tw-color-dark-secondary-background) rounded-lg shadow-md p-4">
           <p>
-            <b>{biographyData.title}</b> — {biographyData.description}
+            <b>{biographyData.title}</b> —{' '}
+            <span className="dark:text-white/80">
+              {biographyData.description}
+            </span>
           </p>
         </div>
       </ScrollReveal>
