@@ -26,7 +26,7 @@ export const GalleryPage = () => {
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.9 }}
             src={photo}
-            className="flex-shrink-0 bg-stone-200 w-96 h-96 object-fill max-xl:w-64 max-xl:h-64 max-md:w-48 max-md:h-48 max-sm:w-32 max-sm:h-32"
+            className="flex-shrink-0 bg-stone-200 w-96 h-96 object-fill max-xl:w-64 max-xl:h-64 max-md:w-48 max-md:h-48 max-sm:w-38 max-sm:h-38"
             loading="lazy"
             key={index}
           />

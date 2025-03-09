@@ -8,6 +8,8 @@ import { titleVariants } from '@/variants';
 import { m } from 'framer-motion';
 import { PartyPopper } from 'lucide-react';
 
+const quiz = vasylSymonenkoQuiz.sort(() => Math.random() - 0.5).slice(0, 12);
+
 export const TestPage = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | undefined>();
@@ -18,9 +20,7 @@ export const TestPage = () => {
   };
 
   const handleNextQuestion = () => {
-    if (
-      selectedOption === vasylSymonenkoQuiz[currentQuestionIndex].correctAnswer
-    ) {
+    if (selectedOption === quiz[currentQuestionIndex].correctAnswer) {
       setScore(score + 1);
     }
     setSelectedOption(undefined);
@@ -45,30 +45,33 @@ export const TestPage = () => {
         transition={{ duration: 0.5 }}
         initial="hidden"
         animate="visible"
-        className="p-6 rounded-lg dark:bg-(--tw-color-blue)/30 bg-(--tw-color-card) shadow-md text-2xl max-w-[600px] w-full"
+        className="p-6 rounded-lg  dark:shadow-[rgba(0,_0,_0,_0.5)] dark:bg-(--tw-color-dark-secondary-background) bg-(--tw-color-card) shadow-md text-2xl max-w-[600px] w-full"
       >
-        {currentQuestionIndex < vasylSymonenkoQuiz.length ? (
+        {currentQuestionIndex < quiz.length ? (
           <div className="flex flex-col gap-2">
-            <h3>{vasylSymonenkoQuiz[currentQuestionIndex].question}</h3>
+            <div className="flex justify-between gap-2">
+              <h3>{quiz[currentQuestionIndex].question}</h3>
+              <span>
+                {currentQuestionIndex + 1}/{quiz.length}
+              </span>
+            </div>
             <RadioGroup
               className="flex flex-col gap-4"
               value={selectedOption}
               onValueChange={handleOptionSelect}
             >
-              {vasylSymonenkoQuiz[currentQuestionIndex].options.map(
-                (option) => (
-                  <div key={option} className="flex items-center space-x-2">
-                    <RadioGroupItem
-                      className="cursor-pointer dark:bg-white/20 "
-                      value={option}
-                      id={option}
-                    />
-                    <Label className="cursor-pointer" htmlFor={option}>
-                      {option}
-                    </Label>
-                  </div>
-                )
-              )}
+              {quiz[currentQuestionIndex].options.map((option) => (
+                <div key={option} className="flex items-center space-x-2">
+                  <RadioGroupItem
+                    className="cursor-pointer dark:bg-(--tw-color-dark-accent)/20 "
+                    value={option}
+                    id={option}
+                  />
+                  <Label className="cursor-pointer" htmlFor={option}>
+                    {option}
+                  </Label>
+                </div>
+              ))}
             </RadioGroup>
             <MButton
               className="self-start mt-2"
@@ -96,13 +99,13 @@ export const TestPage = () => {
               animate="static"
               transition={{ repeat: Infinity }}
             >
-              <PartyPopper className="w-10 h-10 scale-x-[-1]" />
+              <PartyPopper className="w-10 h-10 scale-x-[-1] dark:text-(--tw-color-dark-accent)" />
             </m.span>
             <div>
               Ваш результат:
-              <span className="font-bold">
+              <span className="font-bold dark:text-(--tw-color-dark-accent)">
                 {' '}
-                {score} / {vasylSymonenkoQuiz.length}
+                {score} / {quiz.length}
               </span>
             </div>
             <m.span
@@ -110,7 +113,7 @@ export const TestPage = () => {
               animate="static"
               transition={{ repeat: Infinity }}
             >
-              <PartyPopper className="w-10 h-10" />
+              <PartyPopper className="w-10 h-10 dark:text-(--tw-color-dark-accent)" />
             </m.span>
           </m.div>
         )}
